@@ -1,0 +1,37 @@
+﻿<Window x:Class="AnnuaireClient.DisplayEmployeeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnnuaireClient"
+        mc:Ignorable="d"
+        Title="Fiche de contact" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+    <Grid>
+        <Grid Margin="5">
+            <TextBlock Text="Nom :" Height="20" Margin="5,0,5,5" VerticalAlignment="Top" Width="120" HorizontalAlignment="Left" />
+            <TextBox Name="EmployeeLastnameTextBox" Margin="5,15,5,5" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" ScrollViewer.CanContentScroll="True"
+                     HorizontalAlignment="Left" Width="120" IsReadOnly="True"/>
+            <TextBlock Text="Prénom :" Margin="130,0,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" />
+            <TextBox Name="EmployeeFirstnameTextBox" Margin="130,15,0,0" TextWrapping="Wrap" ScrollViewer.CanContentScroll="True" Height="20" VerticalAlignment="Top"
+                     HorizontalAlignment="Left" Width="120" IsReadOnly="True"/>
+
+            <TextBlock Text="Téléphone :" Height="20" Margin="5,40,5,5" VerticalAlignment="Top" Width="120" HorizontalAlignment="Left" Panel.ZIndex="1" />
+            <TextBox Name="EmployeePhoneNumberTextBox" Margin="5,55,5,5" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" ScrollViewer.CanContentScroll="True"
+                     HorizontalAlignment="Left" Width="120" IsReadOnly="True"/>
+            <TextBlock Text="Fixe :" Margin="130,40,0,0" Height="20" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <TextBox Name="EmployeeFixedPhoneNumberTextBox" Margin="130,55,5,5" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" ScrollViewer.CanContentScroll="True"
+                     HorizontalAlignment="Left" Width="120" IsReadOnly="True"/>
+
+            <TextBlock Text="Email :" Height="20" Margin="5,80,5,5" VerticalAlignment="Top" Width="245" HorizontalAlignment="Left" />
+            <TextBox Name="EmployeeEmailTextBox" Margin="5,95,5,5" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" ScrollViewer.CanContentScroll="True"
+                     HorizontalAlignment="Left" Width="245" IsReadOnly="True"/>
+            
+            <TextBlock Text="Agence :" Margin="5,120,0,0" Height="20" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" Panel.ZIndex="1" />
+            <TextBox Name="EmployeeAgencyTextBox" Margin="5,135,5,5" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" ScrollViewer.CanContentScroll="True"
+                     HorizontalAlignment="Left" Width="120" IsReadOnly="True"/>
+            <TextBlock Text="Service :" Margin="130,120,0,0" Height="20" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <TextBox Name="EmployeeServiceTextBox" Margin="130,135,5,5" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" ScrollViewer.CanContentScroll="True"
+                     HorizontalAlignment="Left" Width="120" IsReadOnly="True"/>
+        </Grid>
+    </Grid>
+</Window>

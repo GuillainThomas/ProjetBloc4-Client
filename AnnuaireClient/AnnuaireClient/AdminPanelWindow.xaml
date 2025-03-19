@@ -1,0 +1,81 @@
+﻿<Window x:Class="AnnuaireClient.AdminPanelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnnuaireClient"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="Panneau d'administration" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+    <Grid>
+
+        <TabControl x:Name="TabControl" SelectionChanged="TabControl_SelectionChanged">
+            <TabItem Header="Employés">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="EmployeeDataGrid" Margin="5" AutoGenerateColumns="False" VerticalGridLinesBrush="{x:Null}" Height="230" VerticalAlignment="Top"
+                              IsReadOnly="True" HorizontalGridLinesBrush="#FF333333" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserReorderColumns="False"
+                              SelectionChanged="DetailEmployee_Click">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                            <DataGridTextColumn Header="Nom" Binding="{Binding LastName}"/>
+                            <DataGridTextColumn Header="Prénom" Binding="{Binding FirstName}"/>
+                            <DataGridTextColumn Header="Téléphone" Binding="{Binding MobilePhoneNumber}"/>
+                            <DataGridTextColumn Header="Fixe" Binding="{Binding FixedPhoneNumber}"/>
+                            <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                            <DataGridTextColumn Header="Agence" Binding="{Binding Agency.City}"/>
+                            <DataGridTextColumn Header="Service" Binding="{Binding Service.Name}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel x:Name="EmployeePaginationStackPanel" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,235,0,0" Height="35">
+                        <Button x:Name="EmployeePreviousPageButton" Content="Précédent" Click="PreviousPage_Click" Width="65" Height="25" VerticalAlignment="Center"
+                                HorizontalAlignment="Center" Margin="5,0,0,0"/>
+                        <TextBlock Name="EmployeePageNumberText" Text="Page 1/1" Margin="10" Height="20" Width="50" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <Button x:Name="EmployeeNextPageButton" Content="Suivant" Click="NextPage_Click" Width="65" Height="25" VerticalAlignment="Center"
+                                HorizontalAlignment="Center" Margin="0,0,5,0"/>
+                    </StackPanel>
+                    <Button x:Name="OpenCreateEmployeeButton" Content="Créer un employé" Click="OpenCreateEmployee_Click" Height="25" Margin="5,240,5,5" Width="115" HorizontalAlignment="Right"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Agence">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="AgencyDataGrid" Margin="5" AutoGenerateColumns="False" VerticalGridLinesBrush="{x:Null}" Height="230" VerticalAlignment="Top"
+                              HorizontalGridLinesBrush="#FF333333" IsReadOnly="True"  CanUserResizeColumns="False" CanUserResizeRows="False" CanUserReorderColumns="False"
+                              SelectionChanged="DetailAgency_Click">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                            <DataGridTextColumn Header="Ville" Binding="{Binding City}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel x:Name="AgencyPaginationStackPanel" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,235,0,0" Height="35">
+                        <Button x:Name="AgencyPreviousPageButton" Content="Précédent" Click="PreviousPage_Click" Width="65" Height="25" VerticalAlignment="Center"
+                                HorizontalAlignment="Center" Margin="5,0,0,0"/>
+                        <TextBlock Name="AgencyPageNumberText" Text="Page 1/1" Margin="10" Height="20" Width="50" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <Button x:Name="AgencyNextPageButton" Content="Suivant" Click="NextPage_Click" Width="65" Height="25" VerticalAlignment="Center" Margin="0,0,5,0"
+                                HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button x:Name="OpenCreateAgencyButton" Content="Créer une agence" Click="OpenCreateAgency_Click" Height="25" Margin="300,240,5,5" Width="115"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Service">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="ServiceDataGrid" Margin="5" AutoGenerateColumns="False" VerticalGridLinesBrush="{x:Null}" Height="230" VerticalAlignment="Top"
+                              HorizontalGridLinesBrush="#FF333333" IsReadOnly="True"  CanUserResizeColumns="False" CanUserResizeRows="False" CanUserReorderColumns="False"
+                              SelectionChanged="DetailService_Click">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                            <DataGridTextColumn Header="Nom" Binding="{Binding Name}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel x:Name="ServicePaginationStackPanel" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,235,0,0" Height="35">
+                        <Button x:Name="ServicePreviousPageButton" Content="Précédent" Click="PreviousPage_Click" Width="65" Height="25" VerticalAlignment="Center"
+                                HorizontalAlignment="Center" Margin="5,0,0,0"/>
+                        <TextBlock Name="ServicePageNumberText" Text="Page 1/1" Margin="10" Height="20" Width="50" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <Button x:Name="ServiceNextPageButton" Content="Suivant" Click="NextPage_Click" Width="65" Height="25" VerticalAlignment="Center" Margin="0,0,5,0"
+                                HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Button x:Name="OpenCreateServiceButton" Content="Créer un service" Click="OpenCreateService_Click" Height="25" Margin="300,240,5,5" Width="115"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

@@ -1,0 +1,50 @@
+﻿<Window x:Class="AnnuaireClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnnuaireClient"
+        mc:Ignorable="d"
+        Initialized="Window_Initialized"
+        Loaded="Window_Loaded"
+        KeyDown="MainWindow_KeyDown"
+        Focusable="True"
+        Title="Liste des employés" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+    <Grid>
+        <Grid Width="600" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,5,5,5" Height="370">
+            <DataGrid AutoGenerateColumns="False" x:Name="EmployeeDataGrid" Height="325" VerticalAlignment="Top" Margin="5,5,5,0" VerticalGridLinesBrush="{x:Null}"
+                      HorizontalGridLinesBrush="#FF333333" HorizontalAlignment="Center" SelectionChanged="DetailEmployee_Click" CanUserResizeColumns="False"
+                      CanUserResizeRows="False" CanUserReorderColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nom" Binding="{Binding LastName}" Width="*"/>
+                    <DataGridTextColumn Header="Prénom" Binding="{Binding FirstName}" Width="*"/>
+                    <DataGridTextColumn Header="Agence" Binding="{Binding Agency.City}" Width="*"/>
+                    <DataGridTextColumn Header="Service" Binding="{Binding Service.Name}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <StackPanel x:Name="PaginationStackPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,335,0,0" Height="35" VerticalAlignment="Top">
+                <Button x:Name="PreviousPageButton" Content="Précédent" Click="PreviousPage_Click" Width="70" Height="25" VerticalAlignment="Center" Margin="5,0,0,0"
+                        HorizontalAlignment="Center"/>
+                <TextBlock Name="PageNumberText" Text="Page 1/1" Margin="10" Height="20" Width="50" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Button x:Name="NextPageButton" Content="Suivant" Click="NextPage_Click" Width="70" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center"
+                        Margin="0,0,5,0"/>
+            </StackPanel>
+        </Grid>
+        <Grid Margin="605,5,5,5" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Button x:Name="ReloadPageButton" Content="Rafraîchir" Click="ReloadPage_Click" Margin="5,5,5,5" HorizontalAlignment="Left" Width="150" Height="25"
+                    VerticalAlignment="Top"/>
+            <TextBlock Text="Nom / Prénom" Height="20" Margin="10,40,5,5" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <TextBox Name="SearchBox" Height="25" TextChanged="SearchBox_TextChanged" VerticalAlignment="Top" Margin="5,60,5,5" HorizontalAlignment="Left" Width="150"
+                     VerticalContentAlignment="Center" HorizontalContentAlignment="Stretch"/>
+            <TextBlock Text="Agence" Height="20" Margin="10,90,5,5" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <ComboBox x:Name="AgencySelect" HorizontalAlignment="Left" Margin="5,110,5,5" VerticalAlignment="Top" Width="150" DisplayMemberPath="City" Height="25"
+                      SelectionChanged="AgencySelect_SelectionChanged"/>
+            <TextBlock Text="Service" Height="20" Margin="10,140,5,5" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <ComboBox x:Name="ServiceSelect" HorizontalAlignment="Left" Margin="5,160,5,5" VerticalAlignment="Top" Width="150" DisplayMemberPath="Name" Height="25"
+                      SelectionChanged="ServiceSelect_SelectionChanged"/>
+            <Button x:Name="ClearFiltersButton" Content="Effacer les filtres" Click="ClearFilter_Click" Margin="5,195,5,5" HorizontalAlignment="Left" Width="150" Height="25"
+                    VerticalAlignment="Top"/>
+            <TextBlock x:Name="EmployeeCountTextBlock" Text="0 Employés" Height="20" Margin="0,245,0,5" VerticalAlignment="Top" HorizontalAlignment="Center" />
+        </Grid>
+    </Grid>
+</Window>
