@@ -19,7 +19,6 @@ namespace AnnuaireClient
 
         private async void CreateService_Click(object sender, RoutedEventArgs e)
         {
-            // Create the new employee from input
             newService = new Service
             {
                 Name = NameBox.Text,
@@ -28,7 +27,8 @@ namespace AnnuaireClient
             // Envoyer la requête d'ajout
             await _apiService.AddServiceAsync(newService);
 
-            this.DialogResult = true; // Close the form and return success
+            // Fermer la fenêtre et retourner un succès
+            this.DialogResult = true;
         }
     }
 }

@@ -6,7 +6,6 @@
         xmlns:local="clr-namespace:AnnuaireClient"
         mc:Ignorable="d"
         Initialized="Window_Initialized"
-        Loaded="Window_Loaded"
         KeyDown="MainWindow_KeyDown"
         Focusable="True"
         Title="Liste des employés" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
@@ -18,8 +17,10 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Nom" Binding="{Binding LastName}" Width="*"/>
                     <DataGridTextColumn Header="Prénom" Binding="{Binding FirstName}" Width="*"/>
-                    <DataGridTextColumn Header="Agence" Binding="{Binding Agency.City}" Width="*"/>
-                    <DataGridTextColumn Header="Service" Binding="{Binding Service.Name}" Width="*"/>
+                    <DataGridTextColumn Header="Agence" Binding="{Binding AgencyCity}" Width="*"/>
+                    <DataGridTextColumn Header="Service" Binding="{Binding ServiceName}" Width="*"/>
+                    <!--<DataGridTextColumn Header="Agence" Binding="{Binding Agency.City}" Width="*"/>
+                    <DataGridTextColumn Header="Service" Binding="{Binding Service.Name}" Width="*"/>-->
                 </DataGrid.Columns>
             </DataGrid>
             <StackPanel x:Name="PaginationStackPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,335,0,0" Height="35" VerticalAlignment="Top">

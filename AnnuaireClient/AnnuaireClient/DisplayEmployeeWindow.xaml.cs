@@ -1,23 +1,24 @@
-﻿using AnnuaireClient.Models;
+﻿using AnnuaireClient.ViewModels;
 using System.Windows;
 
 namespace AnnuaireClient
 {
     public partial class DisplayEmployeeWindow : Window
     {
-        public DisplayEmployeeWindow(Employee employee)
+        public DisplayEmployeeWindow(EmployeeViewModel employeeData)
         {
             InitializeComponent();
 
-            if (employee != null)
+            // Initialiser les champs
+            if (employeeData != null)
             {
-                EmployeeLastnameTextBox.Text = employee.LastName;
-                EmployeeFirstnameTextBox.Text = employee.FirstName;
-                EmployeePhoneNumberTextBox.Text = employee.MobilePhoneNumber;
-                EmployeeFixedPhoneNumberTextBox.Text = employee.FixedPhoneNumber;
-                EmployeeEmailTextBox.Text = employee.Email;
-                EmployeeAgencyTextBox.Text = employee.Agency.City;
-                EmployeeServiceTextBox.Text = employee.Service.Name;
+                EmployeeLastnameTextBox.Text = employeeData.LastName;
+                EmployeeFirstnameTextBox.Text = employeeData.FirstName;
+                EmployeePhoneNumberTextBox.Text = employeeData.MobilePhoneNumber;
+                EmployeeFixedPhoneNumberTextBox.Text = employeeData.FixedPhoneNumber;
+                EmployeeEmailTextBox.Text = employeeData.Email;
+                EmployeeAgencyTextBox.Text = employeeData.AgencyCity;
+                EmployeeServiceTextBox.Text = employeeData.ServiceName;
             }
         }
     }

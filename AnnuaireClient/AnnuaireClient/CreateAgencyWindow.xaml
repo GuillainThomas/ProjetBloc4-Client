@@ -9,7 +9,7 @@
     <Grid>
         <Grid Margin="5,5,5,5">
             <Label Content="Ville" HorizontalAlignment="Left" Margin="6,0,0,0" VerticalAlignment="Top" Height="20" Padding="1" UseLayoutRounding="False"/>
-            <TextBox x:Name="CityBox" HorizontalAlignment="Left" Height="30" Margin="5,16,5,0" VerticalAlignment="Top" Width="200" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"/>
+            <TextBox x:Name="CityBox" HorizontalAlignment="Left" Height="30" Margin="5,16,5,0" VerticalAlignment="Top" Width="200" FontSize="16"/>
 
             <Button x:Name="CreateAgencyButton" Click="CreateAgency_Click" Content="Ajouter" Margin="0,55,0,5" HorizontalAlignment="Center" Width="90" Height="25" VerticalAlignment="Top"/>
         </Grid>

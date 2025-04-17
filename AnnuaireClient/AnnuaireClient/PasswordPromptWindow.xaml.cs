@@ -18,12 +18,14 @@ namespace AnnuaireClient
 
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
-            string enteredPassword = PasswordInput.Password; // Get the entered password
+            string enteredPassword = PasswordInput.Password;
 
-            if (enteredPassword == "1234") // Change this to your real password
+            if (enteredPassword == "1234")
             {
-                IsAuthenticated = true; // Mark as authenticated
-                this.DialogResult = true; // Close the window with success
+                IsAuthenticated = true;
+
+                // Fermer la fenêtre et retourner un succès
+                this.DialogResult = true;
             }
             else
             {
@@ -33,7 +35,8 @@ namespace AnnuaireClient
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            this.DialogResult = false; // Close the window without success
+            // Fermer la fenêtre et retourner un echec
+            this.DialogResult = false;
         }
     }
 }

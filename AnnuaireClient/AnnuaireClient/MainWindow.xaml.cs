@@ -1,17 +1,25 @@
-﻿using System.Windows;
+﻿using System.Collections.ObjectModel;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using AnnuaireClient.Models;
 using AnnuaireClient.Services;
+using AnnuaireClient.ViewModels;
 
 namespace AnnuaireClient;
 
 public partial class MainWindow : Window
 {
     private readonly ApiService _apiService = new();
+
+    private List<Employee> displayEmployees = new();
+    private List<Agency> listAgence = new();
+    private List<Service> listService = new();
+
     private int currentPage = 1;
     private int rowsPerPage = 10;
-    private List<Employee> displayEmployees = new();
+
+    private ObservableCollection<EmployeeViewModel> Employees { get; set; }
 
     public MainWindow()
     {
@@ -20,25 +28,22 @@ public partial class MainWindow : Window
 
     private async void Window_Initialized(object sender, EventArgs e)
     {
-        displayEmployees = await _apiService.GetEmployeesAsync();
-        AgencySelect.ItemsSource = await _apiService.GetAgencyAsync();
-        ServiceSelect.ItemsSource = await _apiService.GetServiceAsync();
+        displayEmployees = await _apiService.GetAllEmployeeAsync();
+        AgencySelect.ItemsSource = await _apiService.GetAllAgencyAsync();
+        ServiceSelect.ItemsSource = await _apiService.GetAllServiceAsync();
+        listAgence = await _apiService.GetAllAgencyAsync();
+        listService = await _apiService.GetAllServiceAsync();
         ApplyFilters();
-    }
-
-    private async void Window_Loaded(object sender, RoutedEventArgs e)
-    {
-        
     }
 
     private void DisplayPage(int page)
     {
         int startIndex = (page - 1) * rowsPerPage;
-        var pagedData = displayEmployees.Skip(startIndex).Take(rowsPerPage).ToList();
+        var pagedData = Employees.Skip(startIndex).Take(rowsPerPage).ToList();
 
         EmployeeDataGrid.ItemsSource = pagedData;
-        PageNumberText.Text = $"Page {currentPage}/{(int)Math.Ceiling((double)displayEmployees.Count / rowsPerPage)}";
-        EmployeeCountTextBlock.Text = $"{displayEmployees.Count} employés";
+        PageNumberText.Text = $"Page {currentPage}/{(int)Math.Ceiling((double)Employees.Count / rowsPerPage)}";
+        EmployeeCountTextBlock.Text = $"{Employees.Count} employés";
     }
 
     private void PreviousPage_Click(object sender, RoutedEventArgs e)
@@ -59,36 +64,38 @@ public partial class MainWindow : Window
         }
     }
 
+    // Appelle les méthodes de filtrage lorsque le texte de recherche ou la sélection d'agence ou de service change
     private void SearchBox_TextChanged(object sender, TextChangedEventArgs e) => ApplyFilters();
     private void AgencySelect_SelectionChanged(object sender, SelectionChangedEventArgs e) => ApplyFilters();
     private void ServiceSelect_SelectionChanged(object sender, SelectionChangedEventArgs e) => ApplyFilters();
-    private void ReloadPage_Click(object sender, RoutedEventArgs e) => ApplyFilters();
 
+    // Recharge la liste des agences et services
+    private async void ReloadPage_Click(object sender, RoutedEventArgs e)
+    {
+        AgencySelect.ItemsSource = await _apiService.GetAllAgencyAsync();
+        ServiceSelect.ItemsSource = await _apiService.GetAllServiceAsync();
+        listAgence = await _apiService.GetAllAgencyAsync();
+        listService = await _apiService.GetAllServiceAsync();
+        ApplyFilters();
+    }
+
+    // Applique les filtres de recherche sur la liste des employés
     private async void ApplyFilters()
     {
         string searchText = SearchBox.Text.ToLower();
         int agencySelected = AgencySelect.SelectedItem as Agency != null ? (AgencySelect.SelectedItem as Agency)!.Id : 0;
         int serviceSelected = ServiceSelect.SelectedItem as Service != null ? (ServiceSelect.SelectedItem as Service)!.Id : 0;
 
-        displayEmployees = await _apiService.GetEmployeesAsync();
-        AgencySelect.ItemsSource = await _apiService.GetAgencyAsync();
-        ServiceSelect.ItemsSource = await _apiService.GetServiceAsync();
+        displayEmployees = await _apiService.GetFilteredEmployeeAsync(agencySelected == 0 ? string.Empty : agencySelected.ToString(), serviceSelected == 0 ? string.Empty : serviceSelected.ToString(), searchText);
 
-        if (!string.IsNullOrEmpty(searchText))
-        {
-            displayEmployees = displayEmployees.Where(x => x.LastName.ToLower().Contains(searchText) || x.FirstName.ToLower().Contains(searchText)).ToList();
-        }
+        Employees = new ObservableCollection<EmployeeViewModel>(
+                displayEmployees.Select(e => new EmployeeViewModel(
+                    e,
+                    listAgence.FirstOrDefault(a => a.Id == e.AgencyId),
+                    listService.FirstOrDefault(s => s.Id == e.ServiceId)
+                ))
+            );
 
-        if (agencySelected != 0)
-        {
-            displayEmployees = displayEmployees.Where(x => x.AgencyId == agencySelected).ToList();
-        }
-        
-        if (serviceSelected != 0)
-        {
-            displayEmployees = displayEmployees.Where(x => x.ServiceId == serviceSelected).ToList();
-        }
-        
         currentPage = 1;
         DisplayPage(currentPage);
     }
@@ -101,26 +108,30 @@ public partial class MainWindow : Window
         ApplyFilters();
     }
 
-    private async void DetailEmployee_Click(object sender, SelectionChangedEventArgs e)
+    // Ouvre la fenêtre de détails de l'employé sélectionné
+    private void DetailEmployee_Click(object sender, SelectionChangedEventArgs e)
     {
-        Employee selectedEmployee = EmployeeDataGrid.SelectedItem as Employee;
+        EmployeeViewModel selectedEmployee = EmployeeDataGrid.SelectedItem as EmployeeViewModel;
 
         if (selectedEmployee != null)
         {
-            DisplayEmployeeWindow detailsWindow = new DisplayEmployeeWindow(selectedEmployee);
+            DisplayEmployeeWindow detailsWindow = new(selectedEmployee);
             detailsWindow.ShowDialog();
         }
     }
 
     private void MainWindow_KeyDown(object sender, KeyEventArgs e)
     {
-        if (Keyboard.IsKeyDown(Key.LeftCtrl) || Keyboard.IsKeyDown(Key.RightCtrl)) // Check for Ctrl key pressed
+        // Vérifier si la touche Ctrl est pressée
+        if (Keyboard.IsKeyDown(Key.LeftCtrl) || Keyboard.IsKeyDown(Key.RightCtrl))
         {
-            if (e.Key == Key.F9) // Check for F9 key pressed
+            // Verifier si la touche F9 est pressée
+            if (e.Key == Key.F9)
             {
-                PasswordPromptWindow passwordWindow = new PasswordPromptWindow();
+                PasswordPromptWindow passwordWindow = new();
 
-                if (passwordWindow.ShowDialog() == true) // Wait for password input
+                //Ouvre la fenêtre de mot de passe et attend la réponse
+                if (passwordWindow.ShowDialog() == true)
                 {
                     AdminPanelWindow formWindow = new();
                     formWindow.Show();

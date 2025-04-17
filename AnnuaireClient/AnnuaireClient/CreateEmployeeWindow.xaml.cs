@@ -9,6 +9,7 @@ namespace AnnuaireClient
         private readonly ApiService _apiService = new();
 
         public Employee newEmployee { get; private set; }
+
         public CreateEmployeeWindow()
         {
             InitializeComponent();
@@ -23,13 +24,13 @@ namespace AnnuaireClient
 
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            AgencySelect.ItemsSource = await _apiService.GetAgencyAsync();
-            ServiceSelect.ItemsSource = await _apiService.GetServiceAsync();
+            // Remplir les listes déroulantes avec les agences et services
+            AgencySelect.ItemsSource = await _apiService.GetAllAgencyAsync();
+            ServiceSelect.ItemsSource = await _apiService.GetAllServiceAsync();
         }
 
         private async void CreateEmployee_Click(object sender, RoutedEventArgs e)
         {
-            // Create the new employee from input
             newEmployee = new Employee
             {
                 LastName = LastNameBox.Text,
@@ -44,7 +45,8 @@ namespace AnnuaireClient
             // Envoyer la requête d'ajout
             await _apiService.AddEmployeeAsync(newEmployee);
 
-            this.DialogResult = true; // Close the form and return success
+            // Fermer la fenêtre et retourner un succès
+            this.DialogResult = true;
         }
     }
 }

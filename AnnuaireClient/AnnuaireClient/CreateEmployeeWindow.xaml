@@ -10,23 +10,23 @@
     <Grid>
         <Grid Margin="5,5,5,5">
             <Label Content="Nom" HorizontalAlignment="Left" Margin="6,0,0,0" VerticalAlignment="Top" Height="20" Padding="1" UseLayoutRounding="False"/>
-            <TextBox x:Name="LastNameBox" HorizontalAlignment="Left" Height="30" Margin="5,16,0,0" VerticalAlignment="Top" Width="200" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"/>
+            <TextBox x:Name="LastNameBox" HorizontalAlignment="Left" Height="30" Margin="5,16,0,0" VerticalAlignment="Top" Width="200" FontSize="16" HorizontalContentAlignment="Left"/>
             <Label Content="Prénom" HorizontalAlignment="Left" Margin="216,0,0,0" VerticalAlignment="Top" Height="20" Padding="1" UseLayoutRounding="False"/>
-            <TextBox x:Name="FirstNameBox" HorizontalAlignment="Left" Height="30" Margin="216,16,5,5" VerticalAlignment="Top" Width="200" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"/>
+            <TextBox x:Name="FirstNameBox" HorizontalAlignment="Left" Height="30" Margin="216,16,5,5" VerticalAlignment="Top" Width="200" FontSize="16" HorizontalContentAlignment="Left"/>
 
             <Label Content="Téléphone portable" HorizontalAlignment="Left" Margin="6,50,0,0" VerticalAlignment="Top" Height="20" Padding="1" UseLayoutRounding="False"/>
-            <TextBox x:Name="MobilePhoneNumberBox" HorizontalAlignment="Left" Height="30" Margin="5,66,5,5" VerticalAlignment="Top" Width="200" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+            <TextBox x:Name="MobilePhoneNumberBox" HorizontalAlignment="Left" Height="30" Margin="5,66,5,5" VerticalAlignment="Top" Width="200" FontSize="16" HorizontalContentAlignment="Left"/>
             <Label Content="Téléphone fixe" HorizontalAlignment="Left" Margin="216,50,0,0" VerticalAlignment="Top" Height="20" Padding="1" UseLayoutRounding="False"/>
-            <TextBox x:Name="FixedPhoneNumberBox" HorizontalAlignment="Left" Height="30" Margin="215,66,5,5" VerticalAlignment="Top" Width="200" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
-            
+            <TextBox x:Name="FixedPhoneNumberBox" HorizontalAlignment="Left" Height="30" Margin="215,66,5,5" VerticalAlignment="Top" Width="200" FontSize="16" HorizontalContentAlignment="Left"/>
+
             <Label Content="Email" HorizontalAlignment="Left" Margin="6,100,0,0" VerticalAlignment="Top" Height="20" Padding="1" UseLayoutRounding="False"/>
-            <TextBox x:Name="EmailBox" HorizontalAlignment="Left" Height="30" Margin="5,116,5,5" VerticalAlignment="Top" Width="410" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
-            
+            <TextBox x:Name="EmailBox" HorizontalAlignment="Left" Height="30" Margin="5,116,5,5" VerticalAlignment="Top" Width="410" FontSize="16" HorizontalContentAlignment="Left"/>
+
             <Label Content="Agence" HorizontalAlignment="Left" Margin="6,150,0,0" VerticalAlignment="Top" Padding="1" UseLayoutRounding="False" Height="20"/>
-            <ComboBox x:Name="AgencySelect" HorizontalAlignment="Left" Margin="5,166,5,5" VerticalAlignment="Top" Width="200" DisplayMemberPath="City" Height="30"/>
+            <ComboBox x:Name="AgencySelect" HorizontalAlignment="Left" Margin="5,166,5,5" VerticalAlignment="Top" Width="200" DisplayMemberPath="City" Height="30" FontSize="16"/>
             <Label Content="Service" HorizontalAlignment="Left" Margin="216,150,0,0" VerticalAlignment="Top" Height="20" Padding="1" UseLayoutRounding="False"/>
-            <ComboBox x:Name="ServiceSelect" HorizontalAlignment="Left" Margin="215,166,5,5" VerticalAlignment="Top" Width="200" DisplayMemberPath="Name" Height="30"/>
-            
+            <ComboBox x:Name="ServiceSelect" HorizontalAlignment="Left" Margin="215,166,5,5" VerticalAlignment="Top" Width="200" DisplayMemberPath="Name" Height="30" FontSize="16"/>
+
             <Button x:Name="CreateEmployeeButton" Click="CreateEmployee_Click" Content="Ajouter" Margin="0,205,0,5" HorizontalAlignment="Center" Width="90" Height="25" VerticalAlignment="Top"/>
         </Grid>
     </Grid>

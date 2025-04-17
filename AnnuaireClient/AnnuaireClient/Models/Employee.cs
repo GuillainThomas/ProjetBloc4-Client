@@ -17,9 +17,5 @@
         public int AgencyId { get; set; }
 
         public int ServiceId { get; set; }
-
-        public virtual Agency Agency { get; set; } = null!;
-
-        public virtual Service Service { get; set; } = null!;
     }
 }

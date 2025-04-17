@@ -22,8 +22,8 @@
                             <DataGridTextColumn Header="Téléphone" Binding="{Binding MobilePhoneNumber}"/>
                             <DataGridTextColumn Header="Fixe" Binding="{Binding FixedPhoneNumber}"/>
                             <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
-                            <DataGridTextColumn Header="Agence" Binding="{Binding Agency.City}"/>
-                            <DataGridTextColumn Header="Service" Binding="{Binding Service.Name}"/>
+                            <DataGridTextColumn Header="Agence" Binding="{Binding AgencyCity}"/>
+                            <DataGridTextColumn Header="Service" Binding="{Binding ServiceName}"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <StackPanel x:Name="EmployeePaginationStackPanel" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,235,0,0" Height="35">

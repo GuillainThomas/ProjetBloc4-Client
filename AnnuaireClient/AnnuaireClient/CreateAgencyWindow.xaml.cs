@@ -9,6 +9,7 @@ namespace AnnuaireClient
         private readonly ApiService _apiService = new();
 
         public Agency newAgency { get; private set; }
+
         public CreateAgencyWindow()
         {
             InitializeComponent();
@@ -19,7 +20,6 @@ namespace AnnuaireClient
 
         private async void CreateAgency_Click(object sender, RoutedEventArgs e)
         {
-            // Create the new employee from input
             newAgency = new Agency
             {
                 City = CityBox.Text,
@@ -28,7 +28,8 @@ namespace AnnuaireClient
             // Envoyer la requête d'ajout
             await _apiService.AddAgencyAsync(newAgency);
 
-            this.DialogResult = true; // Close the form and return success
+            // Fermer la fenêtre et retourner un succès
+            this.DialogResult = true;
         }
     }
 }
