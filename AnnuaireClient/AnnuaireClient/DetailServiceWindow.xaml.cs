@@ -8,6 +8,7 @@ namespace AnnuaireClient
     {
         private readonly ApiService _apiService = new();
         private Service service_old;
+        private bool isAssigned = false;
 
         public DetailServiceWindow(Service service)
         {
@@ -18,6 +19,15 @@ namespace AnnuaireClient
             {
                 NameBox.Text = service.Name;
                 service_old = service;
+            }
+        }
+
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            isAssigned = await _apiService.IsServiceAssignedAsync(service_old.Id);
+            if (isAssigned)
+            {
+                DeleteServiceButton.IsEnabled = false;
             }
         }
 

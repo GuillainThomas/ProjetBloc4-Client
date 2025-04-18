@@ -8,6 +8,7 @@ namespace AnnuaireClient
     {
         private readonly ApiService _apiService = new();
         private Agency agency_old;
+        private bool isAssigned = false;
 
         public DetailAgencyWindow(Agency agency)
         {
@@ -18,6 +19,15 @@ namespace AnnuaireClient
             {
                 CityBox.Text = agency.City;
                 agency_old = agency;
+            }
+        }
+
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            isAssigned = await _apiService.IsAgencyAssignedAsync(agency_old.Id);
+            if (isAssigned)
+            {
+                DeleteAgencyButton.IsEnabled = false;
             }
         }
 

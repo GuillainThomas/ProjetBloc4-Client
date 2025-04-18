@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AnnuaireClient"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
         Title="Formulaire de modification d'agence" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
     <Grid>
         <Grid Margin="5,5,5,5">

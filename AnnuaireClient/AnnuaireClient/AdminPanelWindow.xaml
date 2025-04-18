@@ -33,7 +33,7 @@
                         <Button x:Name="EmployeeNextPageButton" Content="Suivant" Click="NextPage_Click" Width="65" Height="25" VerticalAlignment="Center"
                                 HorizontalAlignment="Center" Margin="0,0,5,0"/>
                     </StackPanel>
-                    <Button x:Name="OpenCreateEmployeeButton" Content="Créer un employé" Click="OpenCreateEmployee_Click" Height="25" Margin="5,240,5,5" Width="115" HorizontalAlignment="Right"/>
+                    <Button x:Name="OpenCreateEmployeeButton" Content="Créer un Employé" Click="OpenCreateEmployee_Click" Height="25" Margin="5,240,5,5" Width="115" HorizontalAlignment="Right"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Agence">
@@ -53,7 +53,7 @@
                         <Button x:Name="AgencyNextPageButton" Content="Suivant" Click="NextPage_Click" Width="65" Height="25" VerticalAlignment="Center" Margin="0,0,5,0"
                                 HorizontalAlignment="Center"/>
                     </StackPanel>
-                    <Button x:Name="OpenCreateAgencyButton" Content="Créer une agence" Click="OpenCreateAgency_Click" Height="25" Margin="300,240,5,5" Width="115"/>
+                    <Button x:Name="OpenCreateAgencyButton" Content="Créer une Agence" Click="OpenCreateAgency_Click" Height="25" Margin="300,240,5,5" Width="115"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Service">
@@ -73,7 +73,7 @@
                         <Button x:Name="ServiceNextPageButton" Content="Suivant" Click="NextPage_Click" Width="65" Height="25" VerticalAlignment="Center" Margin="0,0,5,0"
                                 HorizontalAlignment="Center"/>
                     </StackPanel>
-                    <Button x:Name="OpenCreateServiceButton" Content="Créer un service" Click="OpenCreateService_Click" Height="25" Margin="300,240,5,5" Width="115"/>
+                    <Button x:Name="OpenCreateServiceButton" Content="Créer un Service" Click="OpenCreateService_Click" Height="25" Margin="300,240,5,5" Width="115"/>
                 </Grid>
             </TabItem>
         </TabControl>

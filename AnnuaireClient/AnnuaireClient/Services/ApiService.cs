@@ -47,6 +47,10 @@ public class ApiService
     {
         await _httpClient.DeleteAsync($"Agency/{id}");
     }
+    public async Task<bool> IsAgencyAssignedAsync(int id)
+    {
+        return await _httpClient.GetFromJsonAsync<bool>($"Agency/isassigned/{id}");
+    }
 
     // CRUD pour les services
     public async Task<List<Service>> GetAllServiceAsync()
@@ -64,5 +68,9 @@ public class ApiService
     public async Task DeleteServiceAsync(int id)
     {
         await _httpClient.DeleteAsync($"Service/{id}");
+    }
+    public async Task<bool> IsServiceAssignedAsync(int id)
+    {
+        return await _httpClient.GetFromJsonAsync<bool>($"Service/isassigned/{id}");
     }
 }

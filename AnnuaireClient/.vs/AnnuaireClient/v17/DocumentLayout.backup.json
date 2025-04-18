@@ -3,8 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\cube\\Bloc4\\ProjetBloc4-Client\\AnnuaireClient\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2B459D6E-FCFF-4877-941E-9362E1B37A6C}|AnnuaireClient\\AnnuaireClient.csproj|c:\\users\\admin\\desktop\\cube\\bloc4\\projetbloc4-client\\annuaireclient\\annuaireclient\\adminpanelwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B459D6E-FCFF-4877-941E-9362E1B37A6C}|AnnuaireClient\\AnnuaireClient.csproj|solutionrelative:annuaireclient\\adminpanelwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B459D6E-FCFF-4877-941E-9362E1B37A6C}|AnnuaireClient\\AnnuaireClient.csproj|c:\\users\\admin\\desktop\\cube\\bloc4\\projetbloc4-client\\annuaireclient\\annuaireclient\\adminpanelwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2B459D6E-FCFF-4877-941E-9362E1B37A6C}|AnnuaireClient\\AnnuaireClient.csproj|solutionrelative:annuaireclient\\adminpanelwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B459D6E-FCFF-4877-941E-9362E1B37A6C}|AnnuaireClient\\AnnuaireClient.csproj|c:\\users\\admin\\desktop\\cube\\bloc4\\projetbloc4-client\\annuaireclient\\annuaireclient\\detailagencywindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B459D6E-FCFF-4877-941E-9362E1B37A6C}|AnnuaireClient\\AnnuaireClient.csproj|solutionrelative:annuaireclient\\detailagencywindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B459D6E-FCFF-4877-941E-9362E1B37A6C}|AnnuaireClient\\AnnuaireClient.csproj|c:\\users\\admin\\desktop\\cube\\bloc4\\projetbloc4-client\\annuaireclient\\annuaireclient\\detailservicewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2B459D6E-FCFF-4877-941E-9362E1B37A6C}|AnnuaireClient\\AnnuaireClient.csproj|solutionrelative:annuaireclient\\detailservicewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B459D6E-FCFF-4877-941E-9362E1B37A6C}|AnnuaireClient\\AnnuaireClient.csproj|c:\\users\\admin\\desktop\\cube\\bloc4\\projetbloc4-client\\annuaireclient\\annuaireclient\\detailagencywindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2B459D6E-FCFF-4877-941E-9362E1B37A6C}|AnnuaireClient\\AnnuaireClient.csproj|solutionrelative:annuaireclient\\detailagencywindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B459D6E-FCFF-4877-941E-9362E1B37A6C}|AnnuaireClient\\AnnuaireClient.csproj|c:\\users\\admin\\desktop\\cube\\bloc4\\projetbloc4-client\\annuaireclient\\annuaireclient\\detailservicewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B459D6E-FCFF-4877-941E-9362E1B37A6C}|AnnuaireClient\\AnnuaireClient.csproj|solutionrelative:annuaireclient\\detailservicewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B459D6E-FCFF-4877-941E-9362E1B37A6C}|AnnuaireClient\\AnnuaireClient.csproj|c:\\users\\admin\\desktop\\cube\\bloc4\\projetbloc4-client\\annuaireclient\\annuaireclient\\detailemployeewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B459D6E-FCFF-4877-941E-9362E1B37A6C}|AnnuaireClient\\AnnuaireClient.csproj|solutionrelative:annuaireclient\\detailemployeewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2B459D6E-FCFF-4877-941E-9362E1B37A6C}|AnnuaireClient\\AnnuaireClient.csproj|c:\\users\\admin\\desktop\\cube\\bloc4\\projetbloc4-client\\annuaireclient\\annuaireclient\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B459D6E-FCFF-4877-941E-9362E1B37A6C}|AnnuaireClient\\AnnuaireClient.csproj|solutionrelative:annuaireclient\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B459D6E-FCFF-4877-941E-9362E1B37A6C}|AnnuaireClient\\AnnuaireClient.csproj|c:\\users\\admin\\desktop\\cube\\bloc4\\projetbloc4-client\\annuaireclient\\annuaireclient\\detailemployeewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2B459D6E-FCFF-4877-941E-9362E1B37A6C}|AnnuaireClient\\AnnuaireClient.csproj|solutionrelative:annuaireclient\\detailemployeewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +51,114 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AdminPanelWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\cube\\Bloc4\\ProjetBloc4-Client\\AnnuaireClient\\AnnuaireClient\\AdminPanelWindow.xaml.cs",
+              "RelativeDocumentMoniker": "AnnuaireClient\\AdminPanelWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\cube\\Bloc4\\ProjetBloc4-Client\\AnnuaireClient\\AnnuaireClient\\AdminPanelWindow.xaml.cs",
+              "RelativeToolTip": "AnnuaireClient\\AdminPanelWindow.xaml.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAAwKYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T08:38:34.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminPanelWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\cube\\Bloc4\\ProjetBloc4-Client\\AnnuaireClient\\AnnuaireClient\\AdminPanelWindow.xaml",
+              "RelativeDocumentMoniker": "AnnuaireClient\\AdminPanelWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\cube\\Bloc4\\ProjetBloc4-Client\\AnnuaireClient\\AnnuaireClient\\AdminPanelWindow.xaml",
+              "RelativeToolTip": "AnnuaireClient\\AdminPanelWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-18T08:38:30.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DetailAgencyWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\cube\\Bloc4\\ProjetBloc4-Client\\AnnuaireClient\\AnnuaireClient\\DetailAgencyWindow.xaml",
+              "RelativeDocumentMoniker": "AnnuaireClient\\DetailAgencyWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\cube\\Bloc4\\ProjetBloc4-Client\\AnnuaireClient\\AnnuaireClient\\DetailAgencyWindow.xaml",
+              "RelativeToolTip": "AnnuaireClient\\DetailAgencyWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-18T08:34:44.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DetailAgencyWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\cube\\Bloc4\\ProjetBloc4-Client\\AnnuaireClient\\AnnuaireClient\\DetailAgencyWindow.xaml.cs",
+              "RelativeDocumentMoniker": "AnnuaireClient\\DetailAgencyWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\cube\\Bloc4\\ProjetBloc4-Client\\AnnuaireClient\\AnnuaireClient\\DetailAgencyWindow.xaml.cs",
+              "RelativeToolTip": "AnnuaireClient\\DetailAgencyWindow.xaml.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T08:09:33.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DetailServiceWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\cube\\Bloc4\\ProjetBloc4-Client\\AnnuaireClient\\AnnuaireClient\\DetailServiceWindow.xaml",
+              "RelativeDocumentMoniker": "AnnuaireClient\\DetailServiceWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\cube\\Bloc4\\ProjetBloc4-Client\\AnnuaireClient\\AnnuaireClient\\DetailServiceWindow.xaml",
+              "RelativeToolTip": "AnnuaireClient\\DetailServiceWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-18T08:27:47.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DetailServiceWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\cube\\Bloc4\\ProjetBloc4-Client\\AnnuaireClient\\AnnuaireClient\\DetailServiceWindow.xaml.cs",
+              "RelativeDocumentMoniker": "AnnuaireClient\\DetailServiceWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\cube\\Bloc4\\ProjetBloc4-Client\\AnnuaireClient\\AnnuaireClient\\DetailServiceWindow.xaml.cs",
+              "RelativeToolTip": "AnnuaireClient\\DetailServiceWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T08:26:26.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DetailEmployeeWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\cube\\Bloc4\\ProjetBloc4-Client\\AnnuaireClient\\AnnuaireClient\\DetailEmployeeWindow.xaml.cs",
+              "RelativeDocumentMoniker": "AnnuaireClient\\DetailEmployeeWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\cube\\Bloc4\\ProjetBloc4-Client\\AnnuaireClient\\AnnuaireClient\\DetailEmployeeWindow.xaml.cs",
+              "RelativeToolTip": "AnnuaireClient\\DetailEmployeeWindow.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA5wCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T08:25:53.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ApiService.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\cube\\Bloc4\\ProjetBloc4-Client\\AnnuaireClient\\AnnuaireClient\\Services\\ApiService.cs",
               "RelativeDocumentMoniker": "AnnuaireClient\\Services\\ApiService.cs",
               "ToolTip": "C:\\Users\\Admin\\Desktop\\cube\\Bloc4\\ProjetBloc4-Client\\AnnuaireClient\\AnnuaireClient\\Services\\ApiService.cs",
               "RelativeToolTip": "AnnuaireClient\\Services\\ApiService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAB2AAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAA4wDcAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T19:30:29.235Z",
+              "WhenOpened": "2025-04-18T08:14:02.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DetailEmployeeWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\cube\\Bloc4\\ProjetBloc4-Client\\AnnuaireClient\\AnnuaireClient\\DetailEmployeeWindow.xaml",
+              "RelativeDocumentMoniker": "AnnuaireClient\\DetailEmployeeWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\cube\\Bloc4\\ProjetBloc4-Client\\AnnuaireClient\\AnnuaireClient\\DetailEmployeeWindow.xaml",
+              "RelativeToolTip": "AnnuaireClient\\DetailEmployeeWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-18T08:07:31.692Z",
               "EditorCaption": ""
             }
           ]

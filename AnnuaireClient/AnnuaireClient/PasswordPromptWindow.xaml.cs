@@ -30,6 +30,7 @@ namespace AnnuaireClient
             else
             {
                 MessageBox.Show("Incorrect password!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                PasswordInput.Clear();
             }
         }
 
